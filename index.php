@@ -16,11 +16,9 @@ try {
 
   // sql to create table
   $sql = "CREATE TABLE MyGuests (
-  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  id INT(6),
   firstname VARCHAR(30) NOT NULL,
-  lastname VARCHAR(30) NOT NULL,
-  email VARCHAR(50),
-  reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  lastname VARCHAR(30) NOT NULL
   )";
 
   // use exec() because no results are returned
