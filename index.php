@@ -15,11 +15,11 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   // sql to create table
-  $sql = "CREATE TABLE MyGuests (
-  id INT(6),
-  firstname VARCHAR(30) NOT NULL,
-  lastname VARCHAR(30) NOT NULL
-  )";
+  $sql = "CREATE TABLE roles(
+   role_id serial PRIMARY KEY,
+   role_name VARCHAR (255) UNIQUE NOT NULL
+   )
+  ";
 
   // use exec() because no results are returned
   $conn->exec($sql);
